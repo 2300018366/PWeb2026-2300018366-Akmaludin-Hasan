@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>B-2300018366-Akmaludin Hasan-PWeb2026-PWeb-07.2. Tugas Javascript Dasar</title>
+</head>
+<body>
+
+    <h2>Hasil Evaluasi Akademik</h2>
+
+    <script type="text/javascript">
+        // 1. Input Nilai
+        var input = prompt("Masukkan Nilai (0-100):", "0");
+        var nilai = parseInt(input);
+        
+        // 2. Logika Penentuan Nilai Huruf (Berdasarkan Tugas Sebelumnya)
+        var huruf = "";
+        if (nilai >= 80 && nilai <= 100) {
+            huruf = "A";
+        } else if (nilai >= 65 && nilai <= 79) {
+            huruf = "B";
+        } else if (nilai >= 40 && nilai <= 64) {
+            huruf = "C";
+        } else if (nilai >= 21 && nilai <= 39) {
+            huruf = "D";
+        } else {
+            huruf = "E";
+        }
+
+        // 3. Logika Kelulusan (Menggunakan Operator Logika dari Slide)
+        // Jika nilai >= 60 maka Lulus, jika kurang maka Tidak Lulus
+        var status = (nilai >= 60) ? "Lulus" : "Tidak Lulus";
+
+        // 4. Menampilkan Hasil ke Halaman
+        document.write("<p>Nilai Angka: <b>" + nilai + "</b></p>");
+        document.write("<p>Nilai Huruf: <b>" + huruf + "</b></p>");
+        document.write("<p>Status Kelulusan: <b style='color:" + (status == "Lulus" ? "green" : "red") + ";'>" + status + "</b></p>");
+    </script>
+
+</body>
+</html>
